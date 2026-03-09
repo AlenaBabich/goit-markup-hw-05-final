@@ -107,4 +107,10 @@
   <symbol id="icon-close-black" viewBox="0 0 8 8">
     <path d="M8 0.8L7.2 0L4 3.2L0.8 0L0 0.8L3.2 4L0 7.2L0.8 8L4 4.8L7.2 8L8 7.2L4.8 4L8 0.8Z"></path>
   </symbol>
+  <symbol id="icon-send" viewBox="0 0 24 24">
+  <path d="M24 0L0 13.5L7.66994 16.3407L19.5 5.25L10.5019 17.3916L10.509 17.3944L10.5 17.4L10.5011 24L14.475 18.861L21 21.285L24 0Z" fill="currentColor"></path>
+</symbol>
+<symbol id="icon-click" viewBox="0 0 10 8">
+  <path d="M1 4L4 7L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+</symbol>
 </svg>
