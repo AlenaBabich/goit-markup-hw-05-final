@@ -682,12 +682,6 @@ a {
   letter-spacing: 0.02em;
 }
 
-/* Футер */
-
-.footer-team-soc {
-  margin-left: 120px; /* Відступ вправо від логотипу */
-}
-
 .footer-soc-title {
   font-weight: 500;
   font-size: 16px;
@@ -963,7 +957,7 @@ a {
   border-color: #4d5ae5;
 }
 
-.modal-form-agreement {
+.modal-checkbox-field {
   margin-bottom: 24px;
 }
 
@@ -1024,7 +1018,7 @@ a {
   color: #4d5ae5;
 }
 /* 2. Отступ под чекбоксом, чтобы кнопка Send не прилипала */
-.modal-form-agreement {
+.modal-checkbox-field {
   margin-bottom: 24px;
 }
 
