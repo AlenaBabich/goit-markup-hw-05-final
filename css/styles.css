@@ -639,9 +639,6 @@ a {
   background-color: #ffffff;
 }
 
-.page-header {
-}
-
 /* Основной фон и отступы футера */
 
 .footer {
@@ -653,9 +650,13 @@ a {
 .footer-container {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
 }
-
+.footer-logo-container {
+  margin-right: 120px;
+}
+.footer-team-soc {
+  margin-right: 80px;
+}
 /* логотип */
 .footer-logo {
   display: inline-block;
@@ -807,10 +808,7 @@ a {
   margin-left: 16px;
   fill: #ffffff;
 }
-/* модальное окно */
-/* ================= MODAL WINDOW ================= */
-
-/* --- ОСНОВНАЯ МОДАЛКА (BACKDROP) --- */
+/* --- BACKDROP & MODAL --- */
 .backdrop {
   position: fixed;
   top: 0;
@@ -841,86 +839,93 @@ a {
   min-height: 584px;
   background: #fcfcfc;
   box-shadow:
-    0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 1px 3px 0 rgba(0, 0, 0, 0.12),
-    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    0 1px 1px rgba(0, 0, 0, 0.14),
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- КРЕСТИК ЗАКРЫТИЯ --- */
-.modal-close-btn {
+/* Поля формы (отступы 8px по ментору) */
+.modal-form-field {
+  margin-bottom: 8px;
+}
+
+/* Подписи (отступ 4px и типографика по ментору) */
+.modal-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+}
+
+.modal-input-wrap {
+  position: relative;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+  border-color: #4d5ae5;
+}
+
+/* Иконки внутри инпутов */
+.modal-input-icon {
   position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e7e9fc;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0;
-  cursor: pointer;
-  transition:
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-  background-color: #404bbf;
-  border: none;
-}
-
-.modal-close-icon {
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover .modal-close-icon,
-.modal-close-btn:focus .modal-close-icon {
-  fill: #ffffff;
+.modal-input:focus + .modal-input-icon {
+  fill: #4d5ae5;
 }
 
-/* --- ПОЛЯ ФОРМЫ --- */
-.modal-label {
-  display: block; /* Чтобы текст был НАД полем */
-  margin-bottom: 4px;
+/* Textarea (отступ 16px до чекбокса) */
+.modal-form-comment {
+  margin-bottom: 16px;
 }
 
-.modal-checkbox-field {
-  margin-bottom: 24px; /* Тот самый отступ перед кнопкой */
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.privacy-link {
-  text-decoration: underline;
-  color: #4d5ae5;
-}
-
-/* --- КНОПКА ОТПРАВИТЬ --- */
+/* Кнопка (фиксированные 169px по ментору) */
 .modal-submit-btn {
   display: block;
-  min-width: 169px;
+  width: 169px; /* Фикс ширина */
   height: 56px;
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  cursor: pointer;
   background-color: #4d5ae5;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15); /* Тень по макету */
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-submit-btn:hover,
-.modal-submit-btn:focus {
-  background-color: #404bbf;
 }
