@@ -939,6 +939,7 @@ a {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 8px;
 }
 
 /* И вот это, чтобы она синела при нажатии: */
@@ -976,6 +977,10 @@ a {
 .modal-close-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-checkbox-link {
+  color: #4d5ae5;
+  text-decoration: underline;
+}
 .modal-title {
   font-weight: 500;
   font-size: 16px;
@@ -992,4 +997,8 @@ a {
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
+}
+.privacy-link {
+  color: #4d5ae5;
+  text-decoration: underline;
 }
